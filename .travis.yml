@@ -2,3 +2,18 @@ language: java
 sudo: false
 jdk:
 - openjdk8
+
+# cache the build tool's caches 
+cache: 
+directories: 
+- $HOME/.m2 
+- $HOME/.gradle 
+
+before_script: 
+- "Xvfb :99 &" 
+- "export DISPLAY=:99" 
+
+maven_build: 
+stage: build 
+script: 
+- "mvn clean package -Djava.awt.headless=true"
