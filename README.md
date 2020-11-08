@@ -1,2 +1,2 @@
 # spring-boot-webapp-uebung
-Test Übung in Systemintegration
+Testübung im Systemintegrationsfach
